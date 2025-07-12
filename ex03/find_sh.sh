@@ -1,1 +1,1 @@
-find . -type f -name '*.sh' -execdir basename -s '.sh'{}+
+find . -type f -name '*.sh' | xargs -I {} basename {} .sh

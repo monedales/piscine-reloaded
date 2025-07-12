@@ -6,11 +6,13 @@
 /*   By: maria-ol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 20:50:54 by maria-ol          #+#    #+#             */
-/*   Updated: 2025/07/10 12:41:06 by maria-ol         ###   ########.fr       */
+/*   Updated: 2025/07/10 13:48:07 by maria-ol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <unistd.h>
+// #include <stdio.h>
+// #include <string.h>
 
 void	ft_putchar(char c);
 // {

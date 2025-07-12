@@ -6,7 +6,7 @@
 /*   By: maria-ol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 16:44:25 by maria-ol          #+#    #+#             */
-/*   Updated: 2025/07/10 12:37:13 by maria-ol         ###   ########.fr       */
+/*   Updated: 2025/07/12 16:13:07 by maria-ol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@ int	ft_recursive_factorial(int nb)
 {
 	if (nb < 0)
 		return (0);
-	if (nb == 0)
+	else if (nb == 0)
 		return (1);
-	if (nb > 1)
-		return (nb * ft_recursive_factorial(nb - 1));
+	if (nb == 1)
+		return (1);
+	return (nb * ft_recursive_factorial(nb - 1));
 }
 // #include <stdio.h>
 

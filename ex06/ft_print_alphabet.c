@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maria-ol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/08 17:05:11 by maria-ol          #+#    #+#             */
-/*   Updated: 2025/07/12 16:11:56 by maria-ol         ###   ########.fr       */
+/*   Created: 2025/07/11 14:51:38 by maria-ol          #+#    #+#             */
+/*   Updated: 2025/07/12 13:45:28 by maria-ol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sqrt(int nb)
-{
-	int	result;
+#include <unistd.h>
 
-	result = 1;
-	if (nb <= 0)
-		return (0);
-	while (result * result <= nb)
+void	ft_putchar(char c);
+// {
+// 	write(1, &c, 1);
+// }
+
+void	ft_print_alphabet(void)
+{
+	char	letter;
+
+	letter = 'a';
+	while (letter <= 'z')
 	{
-		if (result * result == nb)
-			return (result);
-		result++;
+		ft_putchar(letter);
+		letter++;
 	}
 }
-// #include <stdio.h>
 
 // int	main(void)
 // {
-// 	printf("raiz quadrada de 4: %d\n", ft_sqrt(4));
+// 	ft_print_alphabet();
 // 	return (0);
 // }

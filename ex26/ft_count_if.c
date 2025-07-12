@@ -6,35 +6,36 @@
 /*   By: maria-ol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 17:45:41 by maria-ol          #+#    #+#             */
-/*   Updated: 2025/07/11 19:38:56 by maria-ol         ###   ########.fr       */
+/*   Updated: 2025/07/12 13:39:28 by maria-ol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char *str)
-{
-	int	count;
+// #include <stdio.h>
 
-	count = 0;
-	while (str[count])
-	{
-		if (!((str[count] >= 'a' && str[count] <= 'z') 
-		|| (str[count] >= 'A' && str[count] <= 'Z')))
-		{
-			return (0);
-		}
-		count++;
-	}
-	return (1);
-}
-int	ft_str(char *str)
-{
-	
-	while (str++)
-	{
-		ft_isalpha(str++);
-	}
-	return(str);
-}
+// int	ft_isalpha(char *str)
+// {
+// 	int	count;
+
+// 	count = 0;
+// 	while (str[count])
+// 	{
+// 		if (!((str[count] >= 'a' && str[count] <= 'z') 
+// 		|| (str[count] >= 'A' && str[count] <= 'Z')))
+// 		{
+// 			return (0);
+// 		}
+// 		count++;
+// 	}
+// 	return (1);
+// }
+// int	ft_str(char *str)
+// {
+// 	while (str++)
+// 	{
+// 		ft_isalpha(str++);
+// 	}
+// 	return(str);
+// }
 
 int	ft_count_if(char **tab, int (*f)(char*))
 {
@@ -51,10 +52,10 @@ int	ft_count_if(char **tab, int (*f)(char*))
 	}
 	return (count);
 }
-int main(int argc, char **argv)
-{
-	if (argc == 1)
-		return (1);
-	printf(ft_count_if(++argv, ft_str(ft_isalpha)));
-	return (0);
-}
+// int main(int argc, char **argv)
+// {
+// 	if (argc == 1)
+// 		return (1);
+// 	printf("%d\n",ft_count_if(++argv, ft_str(ft_isalpha)));
+// 	return (0);
+// }

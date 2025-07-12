@@ -6,7 +6,7 @@
 /*   By: maria-ol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 14:45:37 by maria-ol          #+#    #+#             */
-/*   Updated: 2025/07/10 19:58:23 by maria-ol         ###   ########.fr       */
+/*   Updated: 2025/07/12 13:38:58 by maria-ol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,20 @@ int	*ft_range(int min, int max)
 	}
 	return (arr);
 }
-#include <stdio.h> 
-int	main(void)
-{
-	int	min = 3;
-	int	max = 13;
-	int	i = 0;
-	int *range= ft_range(min, max);
-	int size = max - min;
+// #include <stdio.h> 
+// int	main(void)
+// {
+// 	int	min = 3;
+// 	int	max = 13;
+// 	int	i = 0;
+// 	int *range= ft_range(min, max);
+// 	int size = max - min;
 
-	while (i < size)
-	{
-		printf("opa %d\n", range[i]);
-		i++;
-	}
-	free(range);
-	return (0);
-}
+// 	while (i < size)
+// 	{
+// 		printf("opa %d\n", range[i]);
+// 		i++;
+// 	}
+// 	free(range);
+// 	return (0);
+// }

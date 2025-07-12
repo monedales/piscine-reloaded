@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maria-ol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/08 17:05:11 by maria-ol          #+#    #+#             */
-/*   Updated: 2025/07/12 16:11:56 by maria-ol         ###   ########.fr       */
+/*   Created: 2025/07/10 17:01:44 by maria-ol          #+#    #+#             */
+/*   Updated: 2025/07/12 14:59:48 by maria-ol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sqrt(int nb)
-{
-	int	result;
+#ifndef FT_ABS_H
+# define FT_ABS_H
 
-	result = 1;
-	if (nb <= 0)
-		return (0);
-	while (result * result <= nb)
-	{
-		if (result * result == nb)
-			return (result);
-		result++;
-	}
-}
-// #include <stdio.h>
+# define ABS(Value) ((Value) < 0 ? -(Value) : (Value))
 
-// int	main(void)
-// {
-// 	printf("raiz quadrada de 4: %d\n", ft_sqrt(4));
-// 	return (0);
-// }
+#endif

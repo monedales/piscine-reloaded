@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_display_file.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maria-ol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/08 17:05:11 by maria-ol          #+#    #+#             */
-/*   Updated: 2025/07/12 16:11:56 by maria-ol         ###   ########.fr       */
+/*   Created: 2025/07/12 16:47:58 by maria-ol          #+#    #+#             */
+/*   Updated: 2025/07/12 17:22:34 by maria-ol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sqrt(int nb)
-{
-	int	result;
+#include "ft_display_file.h"
 
-	result = 1;
-	if (nb <= 0)
-		return (0);
-	while (result * result <= nb)
+void	ft_str_fd(char *str, int fd)
+{
+	while (*str)
 	{
-		if (result * result == nb)
-			return (result);
-		result++;
+		write(fd, str++, 1);
 	}
 }
-// #include <stdio.h>
 
-// int	main(void)
-// {
-// 	printf("raiz quadrada de 4: %d\n", ft_sqrt(4));
-// 	return (0);
-// }
+int	main(int argc, char **argv)
+{
+	if (argc == 1)
+		ft_str_fd("File name missing.", 2);
+	if (argc > 2)
+		ft_str_fd("Too many arguments.", 2);
+	if (argc == 2)
+	{
+		ft_str_fd("*content of file Makefile*", 1);
+	}
+	return (0);
+}
