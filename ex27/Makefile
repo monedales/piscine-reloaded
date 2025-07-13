@@ -1,29 +1,32 @@
 NAME = ft_display_file
 
-SRCS = src/
-SRCS_F = ft_display_file.c
+SRC_DIR = src
+SRCS = $(wildcard $(SRC_DIR)/*.c)
 
-OBJS = $(addprefix $(SRCS), $(SRCS_F:.c=.o))
+OBJS = $(SRCS:.c=.o)
 
-INC = includes/
+INC = includes
+CPPFLAGS = -I $(INC)
+
+RM = rm -rf
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-all: $(NAME)
+%.o: %.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
-$(SRCS)/%.o: $(SRCS)/%.c
-	$(CC) $(CFLAGS) -I $(INC) -c $< -o $@
+all: $(NAME)
 
 clean:
-	rm -f $(OBJS)
+	$(RM) $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY.: all clean fclean re
+.PHONY: all clean fclean re
